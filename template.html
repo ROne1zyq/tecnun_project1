@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Platform Adventure</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-title">Platform Adventure</div>
+    <div class="main-container">
+        <div id="game-container">
+            <canvas id="game-canvas" width="800" height="600"></canvas>
+            <div id="hud">
+                <div class="hud-item">Level: <span id="level">1</span></div>
+                <div class="hud-item">Score: <span id="score">0</span></div>
+                <div class="hud-item">Lives: <span id="lives">3</span>❤️</div>
+            </div>
+            <div class="game-over">
+                <div class="game-over-content">
+                    Game Over!
+                    <div class="final-score">Final Score: <span id="final-score">0</span></div>
+                    <button class="game-button" onclick="game.start()">Play Again</button>
+                </div>
+            </div>
+            <div class="level-complete">
+                <div class="level-complete-content">
+                    Level Complete!<br>
+                    <div class="level-score">Level Score: <span id="level-score">0</span></div>
+                    <button class="game-button" onclick="game.startNextLevel()">Next Level</button>
+                </div>
+            </div>
+            <div class="pause-menu">
+                <div class="pause-content">
+                    Paused
+                    <button class="game-button" onclick="game.resumeGame()">Resume</button>
+                    <button class="game-button" onclick="game.start()">Restart</button>
+                </div>
+            </div>
+        </div>
+        <div class="controls-container">
+            <div class="controls-title">Controls</div>
+            <div class="control-item">
+                <span class="key">A/←</span> Move Left
+            </div>
+            <div class="control-item">
+                <span class="key">D/→</span> Move Right
+            </div>
+            <div class="control-item">
+                <span class="key">SPACE</span> Jump
+            </div>
+            <div class="control-item">
+                <span class="key">ESC</span> Pause
+            </div>
+            <div class="control-item">
+                <span class="key">R</span> Restart
+            </div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
