@@ -308,7 +308,7 @@ class InputSystem {
 class PhysicsSystem {
     static get CONSTANTS() {
         return {
-            GRAVITY: 0.8,
+            GRAVITY: 0.6,
             MOVE_SPEED: 5,
             FRICTION: 0.85,
             MAX_SPEED: 6
